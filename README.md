@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Token Authentication Frontend Example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JWT 인증 기반 로그인 예제입니다.
 
-Currently, two official plugins are available:
+## 환경
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`react`
+`vite`
+`typescript`
 
-## Expanding the ESLint configuration
+## 설명
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+JWT 토큰 두 개(refresh, access)를 활용하여, 재로그인을 최소화합니다.
 
-- Configure the top-level `parserOptions` property like this:
+토큰들은 브라우저 저장소인 쿠키에 저장합니다.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+자세한 설명은 [관련 포스팅](https://codeleeks.github.io/blog/posts/examples/%ED%86%A0%ED%81%B0%20%EA%B8%B0%EB%B0%98%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%98%88%EC%A0%9C.md)을 참고하면 좋습니다.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## 관련 프로젝트
+
+[백엔드 예제 보기](https://github.com/codeleeks/tokenAuthenticationBackend)
+
